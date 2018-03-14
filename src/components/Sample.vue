@@ -1,8 +1,13 @@
 <template>
   <div>
     <ul>
-      <li v-for="money in moneys">
-        {{formatCurrency(money)}}
+    <select v-on:change="onChange">
+      <option value="USD"> USD </option>
+      <option value="EUR"> EUR </option>
+      <option value="JPY"> JPY </option>
+    </select>
+      <li v-for="money, index in moneys">
+        <div>{{getMoneys(index)}}</div>
       </li>
     </ul>
   </div>
@@ -19,10 +24,15 @@ export default {
     }
   },
   methods: {
-    formatCurrency(d) {
-      return this.$helpers.currency(d);
+    getMoneys(i) {
+      return this.$helpers.currency(this.moneys[i]);
+    },
+    onChange(e){
+      this.$helpers.changeCurrency(e.target.value);
+      this.$forceUpdate();
     }
-  }
+  },
+
 }
 </script>
 
