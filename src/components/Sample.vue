@@ -2,9 +2,11 @@
   <div>
     <ul>
     <select v-on:change="onChange">
-      <option value="USD"> USD </option>
-      <option value="EUR"> EUR </option>
-      <option value="JPY"> JPY </option>
+      <option value="USD"> US Dollar </option>
+      <option value="EUR"> European Euro </option>
+      <option value="JPY"> Japanese Yen </option>
+      <option value="CAD"> Canadian Dollar </option>
+      <option value="GBP"> Great Britain Pound </option>
     </select>
       <li v-for="money, index in moneys">
         <div>{{getMoneys(index)}}</div>
@@ -19,7 +21,7 @@ export default {
   data () {
     return {
       moneys: [
-        100, 150, 99, 210, 44.30, 24
+        100500.945, 15043.5, 9909, 210, 44.30, -24, 'tq1'
       ]
     }
   },

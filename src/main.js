@@ -5,7 +5,10 @@ import App from './App'
 import Currency from './v-currency'
 
 Vue.config.productionTip = false
-Vue.use(Currency, {"type": "USD"});
+Vue.use(Currency, {
+  "type": "USD",
+  "thousandSeparator": true
+});
 
 /* eslint-disable no-new */
 new Vue({

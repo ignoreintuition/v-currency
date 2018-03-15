@@ -2,6 +2,15 @@
 
 > A plugin for managing currency in Vue.js
 
+## Usage
+
+```
+ Vue.use(Currency, {
+  "type": "USD",
+  "thousandSeparator": true,
+ });
+```
+
 ## Build Setup
 
 ``` bash
