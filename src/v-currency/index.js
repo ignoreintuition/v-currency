@@ -110,8 +110,14 @@ function negativePattern(val, format){
 }
 
 function insertCurrencySymbol(val, format){
-  if (format.indexOf('_') > -1)
-    val = (format.indexOf('_') === 0) ? `${val.toString() + " " + format.substr(1,format.length)}` : `${format.substr(0, format.length-1) + " " + val.toString()}`
+  var pSign = '';
+  if (format.indexOf('_') > -1) {
+    if (val.indexOf('-') === 0) {
+      pSign = '-'
+      val = val.substr(1, val.length);
+    }
+    val = (format.indexOf('_') === 0) ? `${pSign + val.toString() + " " + format.substr(1,format.length)}` : `${pSign + format.substr(0, format.length-1) + " " + val.toString()}`
+  }
   else
     val = `${format + " " + val.toString()}`
   return val;

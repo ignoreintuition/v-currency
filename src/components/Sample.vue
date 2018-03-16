@@ -7,9 +7,10 @@
       <option value="JPY"> Japanese Yen </option>
       <option value="CAD"> Canadian Dollar </option>
       <option value="GBP"> Great Britain Pound </option>
+      <option value="DEU"> German </option>
     </select>
       <li v-for="money, index in moneys">
-        <div>{{getMoneys(index)}}</div>
+        <div id="moneys">{{getMoneys(index)}}</div>
       </li>
     </ul>
   </div>
@@ -40,5 +41,9 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-
+#moneys {
+  width: 100px;
+  font: 1.2 em "helvetica", sans-serif;
+  text-align: right;
+}
 </style>
