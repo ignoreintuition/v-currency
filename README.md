@@ -1,6 +1,6 @@
 # v-currency
 
-> A plugin for managing currency in Vue.js
+> A plugin for formatting currency in Vue.js
 
 ## Usage
 
@@ -9,6 +9,52 @@
   "type": "USD",
   "thousandSeparator": true,
  });
+```
+
+In order to use it in your components:
+
+```
+export default {
+  name: 'Sample',
+  data () {
+    return {
+      moneys: [
+        100500.945, 15043.5, 9909, 210, 44.30, -24, 'tq1'
+      ]
+    }
+  },
+  methods: {
+    getMoneys(i) {
+      return this.$helpers.currency(this.moneys[i]);
+    },
+  },
+
+```
+
+To change currency on the fly
+```
+onChange(e){
+  this.$helpers.changeCurrency(e.target.value);
+  this.$forceUpdate();
+}
+```
+
+## Supported formats
+* USD
+* CAD
+* EUR
+* GBP
+* JPY
+
+To create a custom format you can add rules to the components
+
+```
+"YOUR_CUSTOM_CURRENCY": {
+  "symbol": "$",
+  "thousandSeperator": 0, // (0: comma || 1: decimal)
+  "decimalSeperator": 0, // (0: decimal || 1: comma)
+  "negativePattern": 2 // (0: symbol before || 1: symbol after || 2: Parenthesis)
+},
 ```
 
 ## Build Setup
