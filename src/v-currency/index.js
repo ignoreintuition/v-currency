@@ -35,6 +35,12 @@ const RULES = {
     "decimalSeperator": 1,
     "negativePattern": 0
   },
+  "BRL": {
+    "symbol": "R$_",
+    "thousandSeperator": 1,
+    "decimalSeperator": 1,
+    "negativePattern": 0
+  }
 };
 
 export default {
