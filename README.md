@@ -40,18 +40,23 @@ onChange(e){
 ```
 
 ## Supported formats
-* USD
-* CAD
-* EUR
-* GBP
-* JPY
-* DEU
+* USD (US)
+* CAD (Canada)
+* EUR (Europe)
+* GBP (Great Britain)
+* JPY (Japan)
+* DEU (Germany)
+* BRA (Brazil)
+* FRA (France)
+* ITA (Italy)
+* CHE (Switzerland)
+* BGR (Bulgaria)
 
 To create a custom format you can add rules to the components
 
 ```
 "YOUR_CUSTOM_CURRENCY": {
-  "symbol": "$_", // preceding underscore places numbers before symbol.  succeeding underscore places numbers after symbol 
+  "symbol": "$_", // preceding underscore places numbers before symbol.  succeeding underscore places numbers after symbol
   "thousandSeperator": 0, // (0: comma || 1: decimal || 2: space || 3: apostrophe)
   "decimalSeperator": 0, // (0: decimal || 1: comma || 2: space)
   "negativePattern": 2 // (0: symbol before || 1: symbol after || 2: Parenthesis)

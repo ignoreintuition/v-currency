@@ -40,6 +40,30 @@ const RULES = {
     "thousandSeperator": 1,
     "decimalSeperator": 1,
     "negativePattern": 0
+  },
+  "FRA": {
+    "symbol": "_€",
+    "thousandSeperator": 2,
+    "decimalSeperator": 1,
+    "negativePattern": 0
+  },
+  "ITA": {
+    "symbol": "€_",
+    "thousandSeperator": 1,
+    "decimalSeperator": 1,
+    "negativePattern": 0
+  },
+  "CHE": {
+    "symbol": "fr. _",
+    "thousandSeperator": 3,
+    "decimalSeperator": 0,
+    "negativePattern": 0
+  },
+  "BGR": {
+    "symbol": "_лв.",
+    "thousandSeperator": 2,
+    "decimalSeperator": 1,
+    "negativePattern": 0
   }
 };
 

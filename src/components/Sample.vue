@@ -8,6 +8,10 @@
       <option value="CAD"> Canadian Dollar </option>
       <option value="GBP"> Great Britain Pound </option>
       <option value="DEU"> German </option>
+      <option value="FRA"> French </option>
+      <option value="ITA"> Italy </option>
+      <option value="CHE"> Swiss Franc </option>
+      <option value="BGR"> Bulgaria </option>
     </select>
       <li v-for="money, index in moneys">
         <div id="moneys">{{getMoneys(index)}}</div>
