@@ -84,8 +84,10 @@ export default {
 }
 
 function convert(o, val){
-  if (o.type === undefined || RULES[o.type] === undefined)
+  if (o.type === undefined)
     return `${val.toString()}`
+  if (RULES[o.type] === undefined)
+    return Number(val).toLocaleString(navigator.language || 'en-US', {'style': 'currency', 'currency': o.type});
   val = (o.thousandSeparator) ? insertThousandSeparator(val, RULES[o.type].thousandSeperator) : val;
   val = insertDecimalSeperator(val, RULES[o.type].decimalSeperator);
   val = negativePattern(val, RULES[o.type].negativePattern);

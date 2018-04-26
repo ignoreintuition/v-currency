@@ -12,6 +12,8 @@
       <option value="ITA"> Italy </option>
       <option value="CHE"> Swiss Franc </option>
       <option value="BGR"> Bulgaria </option>
+      <option value="CNY"> Chinese </option>
+      <option value="?"> ? </option>
     </select>
       <li v-for="money, index in moneys">
         <div id="moneys">{{getMoneys(index)}}</div>
