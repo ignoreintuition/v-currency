@@ -52,7 +52,7 @@ onChange(e){
 * CHE (Switzerland)
 * BGR (Bulgaria)
 
-To create a custom format you can add rules to the components
+If the format is not explicitly defined in the ruleset will default to JavaScripts toLocaleString.  To create a custom format you can add rules to the components.  
 
 ```
 "YOUR_CUSTOM_CURRENCY": {
